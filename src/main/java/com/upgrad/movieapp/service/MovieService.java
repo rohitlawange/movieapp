@@ -1,5 +1,7 @@
 package com.upgrad.movieapp.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,10 @@ public class MovieService {
 	
 	public Movie getMovie(int movieId) {
 		return movieDao.getMovie(movieId);
+	}
+
+	public List<Movie> getAllMovies() {
+		// TODO Auto-generated method stub
+		return movieDao.getAllMovies();
 	}
 }

@@ -1,6 +1,8 @@
 package com.upgrad.movieapp.dao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.upgrad.movieapp.entities.Movie;
@@ -23,6 +25,11 @@ public class MovieDaoListImpl implements MovieDao{
 	public Movie getMovie(int movieId) {
 		// TODO Auto-generated method stub
 		return movies.get(movieId);
+	}
+	
+	@Override
+	public List<Movie> getAllMovies(){
+		return new ArrayList<Movie>(movies.values());
 	}
 
 }
